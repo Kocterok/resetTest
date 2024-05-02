@@ -1,18 +1,14 @@
 {% extends "appreset/layout.html" %}
 
 {% block title %}
-    {{ title }}
+    Наши новости
 {% endblock %}
 
 {% block content %}
     <div class="features">
-        <h1>{{ title }}</h1>
-        <p>Начните этот день сегодня!</p>
+        <h1>Наши новости</h1>
+        <p>Выбор каждого, это ваш выбор!</p>
         <button class="btn btn-primary">Страница про нас</button>
-
-        {% for el in values %}
-            <p>{{ el }}</p>
-        {% endfor %}
     </div>
     {% include 'appreset/test.html' %}
 {% endblock %}
