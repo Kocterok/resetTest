@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .models import Articles
 
 def news_home(request):
-    return render(request, 'appnews/news_home.html')
+    news = Articles.objects.order_by('-date')   #[:1]                       # .order_by() метод сортировки
+    return render(request, 'appnews/news_home.html', {'news':news})
