@@ -8,4 +8,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('appreset.urls')),
     path('news/', include('news.urls')),
+    path('calculator/', include('calculator.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -1,0 +1,18 @@
+{% extends 'calculator/base.html' %}
+{% comment %} {% load crispy_forms_tags %} {% endcomment %}
+
+{% block content %}
+{% comment %} <link rel="stylesheet" href="https://bootswatch.com/5/cosmo/bootstrap.min.css"> {% endcomment %}
+    <div class="">
+        <div class="features">
+            <h1>Калькулятор общего объема инвестиций</h1>
+
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}   {% comment %}  |crispy  {% endcomment %}
+
+                <button class="btn btn-primary" type="submit">Посчитать</button>
+            </form>
+        </div>
+    </div>
+{% endblock content %}
