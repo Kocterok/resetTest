@@ -1,0 +1,16 @@
+{% extends "appreset/layout.html" %}
+
+{% block title %}
+    {{ article.title }}
+{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ article.title }}</h1>
+        <h4>{{ article.anons }}</h4>
+        <p>{{ article.date }}</p>
+        <p>{{ article.fuel_text }}</p>
+        <a href="{% url 'news-delete' article.id %}" class="btn btn-danger" role="button">Удалить</a>
+        <a href="{% url 'news-update' article.id %}" class="btn btn-info" role="button">Редактировать</a>
+    </div>
+{% endblock %}
